@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Game || Guess Game</title>
+  </head>
+  <body>
+    <section class="gues-game">
+      <div class="container">
+        <!-- toggle -->
+        <div class="clock">
+          <div class="hour">
+            <div class="hr" id="hr"></div>
+          </div>
+
+          <div class="min">
+            <div class="mn" id="mn"></div>
+          </div>
+
+          <div class="sec">
+            <div class="sc" id="sc"></div>
+          </div>
+        </div>
+        <!-- clock -->
+        <div
+          class="gues-game__wrapper position-absolute top-50 start-50 translate-middle"
+          style="z-index: 10"
+          id="gues-game__wrapper"
+        >
+          <div class="all">
+            <div class="container">
+              <input type="checkbox" id="toggle" />
+            </div>
+          </div>
+          <h1 class="gues-game__title">Number guessing game</h1>
+          <p class="gues-game__text">
+            We have selected a random number between 1 and 10. See if you can
+            guess it in 10 turns or fewer. We'll tell you if your guess was too
+            high or too low.
+          </p>
+          <p class="gues-game__find">
+            Find the number from <span class="gues-game__span">1</span> to
+            <span class="gues-game__span">10</span>
+          </p>
+          <div class="gues-game__box">
+            <label for="input"
+              ><p class="gues-game__desc">Enter a guess:</p></label
+            >
+
+            <input
+              autocomplete="off"
+              class="gues-game__input"
+              required
+              id="input"
+              name="name"
+              type="number"
+            /><label for="input">
+              <button
+                disabled
+                id="btn"
+                type="button"
+                class="gues-game__btn btn btn-primary"
+              >
+                Submit guess
+              </button>
+            </label>
+          </div>
+          <p class="gues-game__prev" id="gues-game__prev">
+            Previous Guesses:
+            <span class="gues-game__span" id="gues-game__span"></span>
+          </p>
+          <p class="gues-game__ans"></p>
+          <button
+            class="gues-game__button btn btn-primary"
+            type="button"
+            id="button"
+            name="name"
+            form="input"
+          >
+            New game
+          </button>
+          <div class="position-relative start-0">
+            <button
+              class="dino-game btn btn-info d-flex align-items-center position-absolute end-0 bottom-0"
+              style="margin-right: 20px"
+            >
+              <i
+                class="fab fa-android"
+                style="transform: translateY(1px); padding-right: 5px"
+              ></i
+              ><i
+                class="fas fa-gamepad position-absolute top-100 start-50 translate-middle"
+              ></i
+              >other g<i class="fab fa-amazon"></i>mes
+              <i class="fab fa-app-store" style="padding-left: 5px"></i>
+            </button>
+          </div>
+        </div>
+        <div class="cursor" id="cursor"></div>
+        <div class="innercursor" id="innercursor"></div>
+      </div>
+    </section>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
